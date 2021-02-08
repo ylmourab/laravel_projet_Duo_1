@@ -23,3 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/articles', [ArticleController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
+
+Route::get('/createCat', [ContactController::class, 'create']);
+
+Route::post('/add_cat', [ContactController::class, 'store']);
