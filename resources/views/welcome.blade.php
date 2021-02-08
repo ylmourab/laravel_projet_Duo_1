@@ -7,18 +7,20 @@
       <div class="row">
         <div class="col-lg-6 pt-2 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h1>{{$dataHomeElement[0]->titre1}}</h1>
-          <ul>
-            <li><i class="ri-check-line"></i> </li>
-            <li><i class="ri-check-line"></i> {{$dataHomeElement[0]->subtitre2}}</li>
-            <li><i class="ri-check-line"></i>{{$dataHomeElement[0]->subtitre3}}</li>
-          </ul>
+          @foreach ($dataHomelist1 as $item)
+              <ul>
+              <li><i class="ri-check-line"></i>{{$item->texte}}</li>
+  
+              </ul>
+          @endforeach
+          
           <div class="mt-3">
             <a href="#about" class="btn-get-started scrollto">{{$dataHomeElement[0]->btn1}}</a>
             <a href="" class="btn-get-quote">{{$dataHomeElement[0]->btn2}}</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="{{$dataHomeElement[0]->img}}" class="img-fluid" alt="">
+          <img src="{{asset('img/hero-img.png')}}" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -36,17 +38,18 @@
             <h2>{{$dataHomeElement[0]->titre2}}</h2>
             <h3>{{$dataHomeElement[0]->subtitre}}</h3>
             {{-- rajouter une image --}}
-            <img class="img-fluid w-25" src="../img/orange.jpg" alt="orange">
+            <img class="img-fluid w-25" src="{{asset('img/orange.jpg')}}" alt="orange">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
               {{$dataHomeElement[0]->description1}}
             </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
-            </ul>
+            @foreach ($dataHomelist2 as $elem)
+                <ul>
+                <li><i class="ri-check-double-line"></i> {{$elem->texte}}</li>
+                </ul>
+            @endforeach
+            
             <p class="font-italic">
               {{$dataHomeElement[0]->description2}}
             </p>
