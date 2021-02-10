@@ -5,8 +5,8 @@
             <div class="container">
       
               <div class="section-title">
-                <h2>Contact</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+              <h2>{{$bo_titlelist[2]->title}}</h2>
+                <p>{{$bo_titlelist[2]->subtitle}}</p>
               </div>
       
               <div class="row">
@@ -17,22 +17,22 @@
                     <div class="col-md-12">
                       <div class="info-box">
                         <i class="bx bx-map"></i>
-                        <h3>Our Address</h3>
-                        <p>A108 Adam Street, New York, NY 535022</p>
+                        <h3>{{$bo_titlelist[3]->title}}</h3>
+                        <p>{{$bo_adresslist[0]->adresse}}</p>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="info-box mt-4">
                         <i class="bx bx-envelope"></i>
-                        <h3>Email Us</h3>
-                        <p>info@example.com<br>contact@example.com</p>
+                        <h3>{{$bo_titlelist[4]->title}}</h3>
+                        <p>{{$bo_adresslist[0]->mail1}}<br>{{$bo_adresslist[0]->mail2}}</p>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="info-box mt-4">
                         <i class="bx bx-phone-call"></i>
-                        <h3>Call Us</h3>
-                        <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                        <h3>{{$bo_titlelist[5]->title}}</h3>
+                        <p>{{$bo_adresslist[0]->num1}}<br>{{$bo_adresslist[0]->num2}}</p>
                       </div>
                     </div>
                   </div>

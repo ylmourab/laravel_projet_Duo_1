@@ -1,0 +1,2 @@
+@extends('backoffice.template.seconde')
+

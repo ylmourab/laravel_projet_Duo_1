@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BackOfficeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ResiController;
@@ -24,6 +25,8 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/articles', [ArticleController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
 
-Route::get('/createCat', [ContactController::class, 'create']);
-
-Route::post('/add_cat', [ContactController::class, 'store']);
+Route::get('/backoffice',[BackOfficeController::class, 'index']);
+Route::get('/backoffice/homeList1',[BackOfficeController::class, 'i']);
+Route::get('/backoffice/homeList2',[BackOfficeController::class, 'creatA']);
+Route::get('/backoffice/articleList',[BackOfficeController::class, 'creatB']);
+Route::get('/backoffice/homeElem',[BackOfficeController::class, 'creatC']);
